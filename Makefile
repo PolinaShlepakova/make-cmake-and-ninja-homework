@@ -18,3 +18,7 @@ $(BUILDDIR)/$(LIBNAME).o: $(SRCDIR)/calculator.cpp $(SRCDIR)/calculator.h
 
 $(BUILDDIR)/$(LIBNAME).a: $(BUILDDIR)/$(LIBNAME).o
 	ar rcs $(BUILDDIR)/$(LIBNAME).a $(BUILDDIR)/$(LIBNAME).o
+
+.PHONY: clean
+clean:
+	rm -r $(BUILDDIR)
